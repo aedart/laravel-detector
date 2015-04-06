@@ -1,6 +1,6 @@
 {
     "name": "aedart/laravel-detector",
-    "description": "Utility for detecting if a Laravel application is available or not. Can be used to determine a given component must perform logic based current Laravel application settings or not.",
+    "description": "Utility for detecting if a Laravel application is available or not. Can be used to determine if a given component must perform logic based current Laravel application settings or not.",
     "keywords": [
         "Detector",
         "Laravel",
