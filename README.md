@@ -8,7 +8,7 @@ Utility for detecting if a Laravel application is available or not. Can be used 
 
 ## When to use this ##
 
-When you need to determine is a Laravel application instance is available or not
+When you need to determine if a Laravel application instance is available or not and perform some kind of logic, depending on the application's availability.
 
 ## How to install ##
 
