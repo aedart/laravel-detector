@@ -24,7 +24,30 @@ This package uses [composer](https://getcomposer.org/). If you do not know what 
 
 ## Quick start ##
 
-TODO
+In you component, use the `ApplicationDetectorTrait` and invoke the `isApplicationAvailable()` method
+
+```
+#!php
+<?php
+use Aedart\Laravel\Detector\Traits\ApplicationDetectorTrait;
+
+class MyHandler {
+
+    use ApplicationDetectorTrait;
+
+    public function doSomething(){
+        if($this->isApplicationAvailable()){
+            // ... Laravel specific logic - not shown here ... //
+        
+            return true;
+        }
+        
+        // ... Non-Laravel specific logic - not shown here ... //
+        
+        return false
+    }
+}
+```
 
 ## Acknowledgement ##
  
