@@ -5,11 +5,11 @@ use Aedart\Laravel\Detector\ApplicationDetector;
 /**
  * Class ApplicationTraitTest
  *
- * @coversDefaultClass
+ * @coversDefaultClass Aedart\Laravel\Detector\ApplicationDetector
  *
  * @author Alin Eugen Deac <aedart@gmail.com>
  */
-class ApplicationTraitTest extends \Codeception\TestCase\Test
+class ApplicationDetectorTest extends \Codeception\TestCase\Test
 {
 
     /**
