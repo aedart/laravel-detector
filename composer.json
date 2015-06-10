@@ -16,13 +16,13 @@
         }
     ],
     "require": {
-        "php": ">=5.4.0",
-        "illuminate/contracts": "5.0.*"
+        "php": ">=5.5.9",
+        "illuminate/contracts": "5.1.*"
     },
     "require-dev": {
         "aedart/license": "1.*",
         "aedart/license-file-manager": "1.*",
-        "aedart/testing-laravel": "1.0.*",
+        "aedart/testing-laravel": "1.1.*",
         "codeception/codeception": "2.0.*"
     },
     "autoload": {
