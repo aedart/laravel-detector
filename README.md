@@ -12,7 +12,15 @@ When you need to determine if a Laravel application instance is available or not
 
 ## How to install ##
 
-For Laravel version 5.0.x
+### For Laravel version 5.1.x ###
+
+```
+#!console
+
+composer require aedart/laravel-detector 1.1.*
+```
+
+### For Laravel version 5.0.x ###
 
 ```
 #!console
