@@ -94,6 +94,7 @@ class UnitTester extends \Codeception\Actor
      * [!] Method is generated. Documentation taken from corresponding module.
      *
      * Checks that actual is greater than expected
+     * Checks that actual is greater than expected
      *
      * @param        $expected
      * @param        $actual
@@ -119,6 +120,7 @@ class UnitTester extends \Codeception\Actor
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
+     * Checks that actual is greater or equal than expected
      * Checks that actual is greater or equal than expected
      *
      * @param        $expected
@@ -146,6 +148,7 @@ class UnitTester extends \Codeception\Actor
      * [!] Method is generated. Documentation taken from corresponding module.
      *
      * Checks that actual is less than expected
+     * Checks that actual is less than expected
      *
      * @param        $expected
      * @param        $actual
@@ -160,6 +163,7 @@ class UnitTester extends \Codeception\Actor
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
+     * Checks that actual is less or equal than expected
      * Checks that actual is less or equal than expected
      *
      * @param        $expected
