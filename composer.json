@@ -6,7 +6,7 @@
         "Laravel",
         "Utility"
     ],
-    "homepage": "https://bitbucket.org/aedart/laravel-detector",
+    "homepage": "https://github.com/aedart/laravel-detector",
     "license": "BSD-3-Clause",
     "type": "library",
     "authors": [
