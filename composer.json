@@ -22,7 +22,7 @@
     "require-dev": {
         "aedart/license": "1.*",
         "aedart/license-file-manager": "1.*",
-        "aedart/testing-laravel": "~1.2"
+        "aedart/testing-laravel": "~1.6"
     },
     "autoload": {
         "psr-4": {
