@@ -21,8 +21,8 @@
     },
     "require-dev": {
         "aedart/license": "1.*",
-        "aedart/license-file-manager": "1.*",
-        "aedart/testing-laravel": "~1.7"
+        "aedart/license-file-manager": "~1.7",
+        "aedart/testing-laravel": "~1.8"
     },
     "autoload": {
         "psr-4": {
