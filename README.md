@@ -30,11 +30,12 @@ In you component, use the `ApplicationDetectorTrait` and invoke the `isApplicati
 <?php
 use Aedart\Laravel\Detector\Traits\ApplicationDetectorTrait;
 
-class MyHandler {
-
+class MyHandler
+{
     use ApplicationDetectorTrait;
 
-    public function doSomething(){
+    public function doSomething()
+    {
         if($this->isApplicationAvailable()){
             // ... Laravel specific logic - not shown here ... //
         
@@ -43,7 +44,7 @@ class MyHandler {
         
         // ... Non-Laravel specific logic - not shown here ... //
         
-        return false
+        return false;
     }
 }
 ```
