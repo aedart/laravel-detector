@@ -8,22 +8,16 @@ When you need to determine if a Laravel application instance is available or not
 
 ## How to install ##
 
+### For Laravel version 5.3.x ###
+
+```
+composer require aedart/laravel-detector 1.4.*
+```
+
 ### For Laravel version 5.2.x ###
 
 ```
 composer require aedart/laravel-detector 1.3.*
-```
-
-### For Laravel version 5.1.x ###
-
-```
-composer require aedart/laravel-detector 1.2.*
-```
-
-### For Laravel version 5.0.x ###
-
-```
-composer require aedart/laravel-detector 1.0.*
 ```
 
 This package uses [composer](https://getcomposer.org/). If you do not know what that is or how it works, I recommend that you read a little about, before attempting to use this package.
