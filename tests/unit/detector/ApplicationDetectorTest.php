@@ -1,6 +1,7 @@
 <?php
 
 use Aedart\Laravel\Detector\ApplicationDetector;
+use Aedart\Testing\TestCases\Unit\UnitTestCase;
 
 /**
  * Class ApplicationTraitTest
@@ -9,21 +10,8 @@ use Aedart\Laravel\Detector\ApplicationDetector;
  *
  * @author Alin Eugen Deac <aedart@gmail.com>
  */
-class ApplicationDetectorTest extends \Codeception\TestCase\Test
+class ApplicationDetectorTest extends UnitTestCase
 {
-
-    /**
-     * @var \UnitTester
-     */
-    protected $tester;
-
-    protected function _before()
-    {
-    }
-
-    protected function _after()
-    {
-    }
 
     /******************************************************************************
      * Helpers

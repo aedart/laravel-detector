@@ -1,8 +1,8 @@
 <?php
 
 use Aedart\Laravel\Detector\Interfaces\IApplicationDetector;
-use Aedart\Laravel\Detector\Traits\ApplicationDetectorTrait;
 use Aedart\Testing\Laravel\Traits\ApplicationInitiatorTrait;
+use Aedart\Testing\TestCases\Unit\UnitTestCase;
 
 /**
  * Class ApplicationDetectorTraitTest
@@ -11,25 +11,15 @@ use Aedart\Testing\Laravel\Traits\ApplicationInitiatorTrait;
  *
  * @author Alin Eugen Deac <aedart@gmail.com>
  */
-class ApplicationDetectorTraitTest extends \Codeception\TestCase\Test
+class ApplicationDetectorTraitTest extends UnitTestCase
 {
     use ApplicationInitiatorTrait;
 
-    /**
-     * @var \UnitTester
-     */
-    protected $tester;
-
-    protected function _before()
+    public function _after()
     {
-        // Don't start here...
-        //$this->startApplication();
-    }
+        $this->stopApplication();
 
-    protected function _after()
-    {
-        // Don't stop here...
-        //$this->stopApplication();
+        parent::_after();
     }
 
     /******************************************************************************
@@ -69,8 +59,6 @@ class ApplicationDetectorTraitTest extends \Codeception\TestCase\Test
 
         $trait = $this->getTraitMock();
         $this->assertTrue($trait->isApplicationAvailable());
-
-        $this->stopApplication();
     }
 
     /**
