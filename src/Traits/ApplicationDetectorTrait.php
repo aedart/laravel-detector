@@ -47,9 +47,7 @@ trait ApplicationDetectorTrait
         // Foundation namespace (not available as a separate package)
         if (function_exists('app')) {
             $app = app();
-            if (!is_null($app) && $app instanceof Application) {
-                return true;
-            }
+            return (!is_null($app) && $app instanceof Application);
         }
         return false;
     }
@@ -84,9 +82,6 @@ trait ApplicationDetectorTrait
         // In this case, we are looking for two special cases - the core application and the
         // core container of the application. If these are present / available, it should mean
         // that the application is still running and has yet not been flushed
-        if ($application->resolved('app') && $application->resolved('Illuminate\Container\Container')) {
-            return false;
-        }
-        return true;
+        return !($application->resolved('app') && $application->resolved('Illuminate\Container\Container'));
     }
 }
