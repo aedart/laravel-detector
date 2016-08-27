@@ -1,9 +1,11 @@
-<?php  namespace Aedart\Laravel\Detector\Interfaces; 
+<?php namespace Aedart\Laravel\Detector\Interfaces;
 
 use Illuminate\Contracts\Foundation\Application;
 
 /**
  * Interface Application Detector
+ *
+ * <br />
  *
  * Detects if a Foundation-Application instance is available and has not been
  * flushed
@@ -13,7 +15,8 @@ use Illuminate\Contracts\Foundation\Application;
  * @author Alin Eugen Deac <aedart@gmail.com>
  * @package Aedart\Laravel\Detector\Interfaces
  */
-interface IApplicationDetector {
+interface IApplicationDetector
+{
 
     /**
      * Check if a Laravel Application instance is available and

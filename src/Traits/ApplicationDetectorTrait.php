@@ -1,4 +1,4 @@
-<?php  namespace Aedart\Laravel\Detector\Traits;
+<?php namespace Aedart\Laravel\Detector\Traits;
 
 use Illuminate\Contracts\Foundation\Application;
 
@@ -10,7 +10,8 @@ use Illuminate\Contracts\Foundation\Application;
  * @author Alin Eugen Deac <aedart@gmail.com>
  * @package Aedart\Laravel\Detector\Traits
  */
-trait ApplicationDetectorTrait {
+trait ApplicationDetectorTrait
+{
 
     /**
      * Check if a Laravel Application instance is available and
@@ -19,7 +20,8 @@ trait ApplicationDetectorTrait {
      * @return bool True if a Laravel application is available and not yet flushed, false if
      *              application is not available Or if it is available, but has been flushed!
      */
-    public function isApplicationAvailable(){
+    public function isApplicationAvailable()
+    {
         return $this->isContainerAvailable() && !$this->hasBeenFlushed(app());
     }
 
@@ -34,7 +36,8 @@ trait ApplicationDetectorTrait {
      *
      * @return bool True if an application instance is available, false if not
      */
-    public function isContainerAvailable(){
+    public function isContainerAvailable()
+    {
         // There are multiple ways ot attempting to detect if
         // the container is available. Yet, in the most cases, we just
         // desire to know if the helpers method app() exists and returns
@@ -42,9 +45,9 @@ trait ApplicationDetectorTrait {
         // Note - the app() method is only available when the entire
         // framework is available, meaning that it is located inside the
         // Foundation namespace (not available as a separate package)
-        if(function_exists('app')){
+        if (function_exists('app')) {
             $app = app();
-            if(!is_null($app) && $app instanceof Application){
+            if (!is_null($app) && $app instanceof Application) {
                 return true;
             }
         }
@@ -58,7 +61,8 @@ trait ApplicationDetectorTrait {
      *
      * @return bool True if the given application instance has been flushed, false if not
      */
-    public function hasBeenFlushed(Application $application){
+    public function hasBeenFlushed(Application $application)
+    {
         // The problem that we are facing here, is that there is no way
         // of telling if the 'flush' method has been invoked, by just asking
         // directly. The only possible way, is to assume that if there are
@@ -80,7 +84,7 @@ trait ApplicationDetectorTrait {
         // In this case, we are looking for two special cases - the core application and the
         // core container of the application. If these are present / available, it should mean
         // that the application is still running and has yet not been flushed
-        if($application->resolved('app') && $application->resolved('Illuminate\Container\Container')){
+        if ($application->resolved('app') && $application->resolved('Illuminate\Container\Container')) {
             return false;
         }
         return true;
