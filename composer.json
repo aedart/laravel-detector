@@ -17,12 +17,12 @@
     ],
     "require": {
         "php": ">=5.5.9",
-        "illuminate/contracts": "~5.2"
+        "illuminate/contracts": "5.2.*"
     },
     "require-dev": {
         "aedart/license": "1.*",
         "aedart/license-file-manager": "1.*",
-        "aedart/testing-laravel": "~1.6"
+        "aedart/testing-laravel": "~1.7"
     },
     "autoload": {
         "psr-4": {
