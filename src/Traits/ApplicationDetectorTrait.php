@@ -45,11 +45,13 @@ trait ApplicationDetectorTrait
         // Note - the app() method is only available when the entire
         // framework is available, meaning that it is located inside the
         // Foundation namespace (not available as a separate package)
-        if (function_exists('app')) {
-            $app = app();
-            return (!is_null($app) && $app instanceof Application);
+
+        if ( ! function_exists('app')) {
+            return false;
         }
-        return false;
+
+        $app = app();
+        return isset($app) && $app instanceof Application;
     }
 
     /**
