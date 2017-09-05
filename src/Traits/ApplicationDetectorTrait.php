@@ -1,11 +1,15 @@
-<?php namespace Aedart\Laravel\Detector\Traits;
+<?php
+declare(strict_types=1);
 
+namespace Aedart\Laravel\Detector\Traits;
+
+use Illuminate\Contracts\Container\Container;
 use Illuminate\Contracts\Foundation\Application;
 
 /**
- * Trait Application Detector
+ * Application Detector Trait
  *
- * @see \Aedart\Laravel\Detector\Interfaces\IApplicationDetector
+ * @see \Aedart\Laravel\Detector\Contracts\ApplicationDetector
  *
  * @author Alin Eugen Deac <aedart@gmail.com>
  * @package Aedart\Laravel\Detector\Traits
@@ -20,7 +24,7 @@ trait ApplicationDetectorTrait
      * @return bool True if a Laravel application is available and not yet flushed, false if
      *              application is not available Or if it is available, but has been flushed!
      */
-    public function isApplicationAvailable()
+    public function isApplicationAvailable() : bool
     {
         return $this->isContainerAvailable() && !$this->hasBeenFlushed(app());
     }
@@ -36,7 +40,7 @@ trait ApplicationDetectorTrait
      *
      * @return bool True if an application instance is available, false if not
      */
-    public function isContainerAvailable()
+    public function isContainerAvailable() : bool
     {
         // There are multiple ways ot attempting to detect if
         // the container is available. Yet, in the most cases, we just
@@ -61,7 +65,7 @@ trait ApplicationDetectorTrait
      *
      * @return bool True if the given application instance has been flushed, false if not
      */
-    public function hasBeenFlushed(Application $application)
+    public function hasBeenFlushed(Application $application) : bool
     {
         // The problem that we are facing here, is that there is no way
         // of telling if the 'flush' method has been invoked, by just asking
@@ -84,6 +88,6 @@ trait ApplicationDetectorTrait
         // In this case, we are looking for two special cases - the core application and the
         // core container of the application. If these are present / available, it should mean
         // that the application is still running and has yet not been flushed
-        return !($application->resolved('app') && $application->resolved('Illuminate\Container\Container'));
+        return !($application->resolved('app') && $application->resolved(Container::class));
     }
 }
