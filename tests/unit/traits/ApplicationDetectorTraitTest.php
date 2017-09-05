@@ -1,13 +1,14 @@
 <?php
 
-use Aedart\Laravel\Detector\Interfaces\IApplicationDetector;
+use Aedart\Laravel\Detector\Traits\ApplicationDetectorTrait;
 use Aedart\Testing\Laravel\Traits\ApplicationInitiatorTrait;
 use Aedart\Testing\TestCases\Unit\UnitTestCase;
 
 /**
  * Class ApplicationDetectorTraitTest
  *
- * @coversDefaultClass
+ * @group detector
+ * @group detector-trait
  *
  * @author Alin Eugen Deac <aedart@gmail.com>
  */
@@ -28,10 +29,10 @@ class ApplicationDetectorTraitTest extends UnitTestCase
 
     /**
      * Get mock for given trait
-     * @return PHPUnit_Framework_MockObject_MockObject|Aedart\Laravel\Detector\Interfaces\IApplicationDetector
+     * @return PHPUnit_Framework_MockObject_MockObject|\Aedart\Laravel\Detector\Contracts\ApplicationDetector
      */
     protected function getTraitMock(){
-        $m = $this->getMockForTrait('Aedart\Laravel\Detector\Traits\ApplicationDetectorTrait');
+        $m = $this->getMockForTrait(ApplicationDetectorTrait::class);
         return $m;
     }
 
@@ -41,7 +42,6 @@ class ApplicationDetectorTraitTest extends UnitTestCase
 
     /**
      * @test
-     * @covers ::isContainerAvailable
      */
     public function containerIsNotAvailable(){
         $trait = $this->getTraitMock();
@@ -50,9 +50,6 @@ class ApplicationDetectorTraitTest extends UnitTestCase
 
     /**
      * @test
-     * @covers ::isApplicationAvailable
-     * @covers ::isApplicationAvailable
-     * @covers ::isContainerAvailable
      */
     public function applicationIsAvailable(){
         $this->startApplication();
@@ -63,7 +60,6 @@ class ApplicationDetectorTraitTest extends UnitTestCase
 
     /**
      * @test
-     * @covers ::hasBeenFlushed
      */
     public function applicationIsFlushed(){
         $this->startApplication();

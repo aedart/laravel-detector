@@ -6,7 +6,7 @@ use Aedart\Testing\TestCases\Unit\UnitTestCase;
 /**
  * Class ApplicationTraitTest
  *
- * @coversDefaultClass Aedart\Laravel\Detector\ApplicationDetector
+ * @group detector
  *
  * @author Alin Eugen Deac <aedart@gmail.com>
  */
