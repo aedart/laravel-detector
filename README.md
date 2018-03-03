@@ -12,6 +12,7 @@ Utility for detecting if a Laravel application is available or not. Can be used 
 
 - [When to use this](#when-to-use-this)
 - [How to install](#how-to-install)
+  * [For Laravel version 5.6.x](#for-laravel-version-56x)
   * [For Laravel version 5.5.x](#for-laravel-version-55x)
   * [For Laravel version 5.4.x](#for-laravel-version-54x)
   * [For Laravel version 5.3.x](#for-laravel-version-53x)
@@ -29,6 +30,12 @@ Utility for detecting if a Laravel application is available or not. Can be used 
 When you need to determine if a Laravel application instance is available or not and perform some kind of logic, depending on the application's availability.
 
 ## How to install ##
+
+### For Laravel version 5.6.x ###
+
+```
+composer require aedart/laravel-detector 4.*
+```
 
 ### For Laravel version 5.5.x ###
 
