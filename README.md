@@ -4,7 +4,7 @@
 [![Latest Unstable Version](https://poser.pugx.org/aedart/laravel-detector/v/unstable)](https://packagist.org/packages/aedart/laravel-detector)
 [![License](https://poser.pugx.org/aedart/laravel-detector/license)](https://packagist.org/packages/aedart/laravel-detector)
 
-## Laravel-Detector ##
+## Abandoned - Laravel-Detector
 
 Utility for detecting if a Laravel application is available or not. Can be used to determine a given component must perform logic based current Laravel application settings or not.
 
